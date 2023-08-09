@@ -14,7 +14,7 @@ To make `cache-next-install` a part of your workflow, just add a step to one of 
 
 ## Options
 
-| Variable | Description | Required | `[Default]`  |
-| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------: | ------------------------------------- |
-| `node-version` | Version of Node.js to install |   |   |
-| `node-version-file` | Node version file to use |   | `.nvmrc` |
+| Variable            | Description                   | Required | `[Default]` |
+| ------------------- | ----------------------------- | :------: | ----------- |
+| `node-version`      | Version of Node.js to install |          |             |
+| `node-version-file` | Node version file to use      |          | `.nvmrc`    |

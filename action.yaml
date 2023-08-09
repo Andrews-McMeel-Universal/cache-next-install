@@ -24,7 +24,7 @@ runs:
       with:
         node-version: ${{ inputs.node-version || '' }}
         node-version-file: ${{ inputs.node-version-file || '' }}
-        cache: 'yarn'
+        cache: "yarn"
 
     # Caches node_modules, breaks cache when yarn.lock is updated
     - name: Cache dependencies
