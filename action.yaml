@@ -49,4 +49,6 @@ runs:
     - name: Install all dependencies (including devDependencies)
       if: ${{ steps.dependency-cache.outputs.cache-hit != 'true' && inputs.install-dev-dependencies == 'true' }}
       shell: bash
-      run: NODE_ENV=development yarn install
+      env:
+        NODE_ENV: development
+      run: yarn install
