@@ -42,11 +42,11 @@ runs:
     # Installs dependencies from the cached packages
     # in the global yarn cache if the cache was broken
     - name: Install dependencies
-      if: ${{ steps.dependency-cache.outputs.cache-hit != 'true' && inputs.install-dev-dependencies == "false" }}
+      if: ${{ steps.dependency-cache.outputs.cache-hit != 'true' && inputs.install-dev-dependencies == 'false' }}
       shell: bash
       run: yarn install
 
     - name: Install all dependencies (including devDependencies)
-      if: ${{ steps.dependency-cache.outputs.cache-hit != 'true' && inputs.install-dev-dependencies == "true" }}
+      if: ${{ steps.dependency-cache.outputs.cache-hit != 'true' && inputs.install-dev-dependencies == 'true' }}
       shell: bash
       run: NODE_ENV=development yarn install
