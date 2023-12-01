@@ -2,7 +2,7 @@ name: 🔄 Sync with action_template repository
 
 on:
   schedule:
-    - cron: 0 9 1 * *
+    - cron: 0 9 1 JAN,APR,JUL,OCT *
   workflow_dispatch:
     inputs:
       isdryrun:
@@ -29,7 +29,7 @@ jobs:
           pr_labels: sync
           pr_commit_msg: 🔄 Synchronize with @Andrews-McMeel-Universal/action_template
           pr_title: 🔄 Sync with @Andrews-McMeel-Universal/action_template
-          pr_branch_name_prefix: sync/dotgithub/
+          pr_branch_name_prefix: sync/action_template/
           pr_reviewers: Andrews-McMeel-Universal/devops-engineers
           is_dry_run: ${{ inputs.isdryrun || 'false' }}
           git_user_name: amutechtest
