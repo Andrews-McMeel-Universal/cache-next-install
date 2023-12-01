@@ -1,4 +1,3 @@
-.github/CODEOWNERS
 .github/workflows/template-sync.yml
 action.yaml
 README.md
