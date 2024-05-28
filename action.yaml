@@ -20,7 +20,7 @@ runs:
   steps:
     # Installs node and caches the global yarn cache (does not cache node_modules)
     - name: Set up Node
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@v4
       with:
         node-version: ${{ inputs.node-version || '' }}
         node-version-file: ${{ inputs.node-version-file || '' }}
@@ -29,7 +29,7 @@ runs:
     # Caches node_modules, breaks cache when yarn.lock is updated
     - name: Cache dependencies
       id: dependency-cache
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         path: |
           ./node_modules
