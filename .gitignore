@@ -173,7 +173,6 @@ wp-content/shield/
 *.kar
 *.mp3
 *.ogg
-*.m4a
 *.ra
 *.3gpp
 *.3gp
@@ -196,6 +195,7 @@ wp-content/shield/
 ## Environment normalization:
 /.bundle
 /vendor/bundle
+/vendor/cache
 
 # these should all be checked in to normalize the environment:
 # Gemfile.lock, .ruby-version, .ruby-gemset
@@ -218,9 +218,6 @@ wp-content/shield/
 
 # Ignore compiled storybook directory
 /storybook-static
-.storybook/main.js
-.storybook/preview-body.html
-.storybook/preview.js
 
 # Ignore uploaded files in development
 /storage/*
@@ -348,6 +345,48 @@ mono_crash.*
 *Service*/[Ll]og/
 *Service*/[Ll]ogs/
 *Service*/bin/
+*Deploy*/[Dd]ebug/
+*Deploy*/[Dd]ebugPublic/
+*Deploy*/[Rr]elease/
+*Deploy*/[Rr]eleases/
+*Deploy*/x64/
+*Deploy*/x86/
+*Deploy*/[Ww][Ii][Nn]32/
+*Deploy*/[Aa][Rr][Mm]/
+*Deploy*/[Aa][Rr][Mm]64/
+*Deploy*/bld/
+*Deploy*/[Oo]bj/
+*Deploy*/[Ll]og/
+*Deploy*/[Ll]ogs/
+*Deploy*/bin/
+*Api*/[Dd]ebug/
+*Api*/[Dd]ebugPublic/
+*Api*/[Rr]elease/
+*Api*/[Rr]eleases/
+*Api*/x64/
+*Api*/x86/
+*Api*/[Ww][Ii][Nn]32/
+*Api*/[Aa][Rr][Mm]/
+*Api*/[Aa][Rr][Mm]64/
+*Api*/bld/
+*Api*/[Oo]bj/
+*Api*/[Ll]og/
+*Api*/[Ll]ogs/
+*Api*/bin/
+*Job*/[Dd]ebug/
+*Job*/[Dd]ebugPublic/
+*Job*/[Rr]elease/
+*Job*/[Rr]eleases/
+*Job*/x64/
+*Job*/x86/
+*Job*/[Ww][Ii][Nn]32/
+*Job*/[Aa][Rr][Mm]/
+*Job*/[Aa][Rr][Mm]64/
+*Job*/bld/
+*Job*/[Oo]bj/
+*Job*/[Ll]og/
+*Job*/[Ll]ogs/
+*Job*/bin/
 SharedLibraries/*/[Dd]ebug/
 SharedLibraries/*/[Dd]ebugPublic/
 SharedLibraries/*/[Rr]elease/
@@ -794,13 +833,12 @@ FodyWeavers.xsd
 # Project Specific
 # unique ignores for this project
 
+# UI Applications
+next-env.d.ts
+
 # dependencies
 /.pnp
 .pnp.js
-
-# generated during build
-robots.txt
-sitemap*.xml
 
 # misc
 .DS_Store
@@ -848,3 +886,13 @@ terraform/*.key
 
 # Ansible
 vault.yml
+inventories/group_vars/amu
+
+# Typesense
+data/db
+data/meta
+data/models
+data/state
+
+# Syndication
+public/uu_site/
