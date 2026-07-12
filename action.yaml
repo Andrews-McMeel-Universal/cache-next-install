@@ -20,7 +20,7 @@ runs:
   steps:
     # Installs node and caches the global yarn cache (does not cache node_modules)
     - name: Set up Node
-      uses: actions/setup-node@v4
+      uses: actions/setup-node@v6
       with:
         node-version: ${{ inputs.node-version || '' }}
         node-version-file: ${{ inputs.node-version-file || '' }}
